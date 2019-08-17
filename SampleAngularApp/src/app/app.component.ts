@@ -8,7 +8,7 @@ import { RouterService } from './services/Router.Service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SampleAngularApp';
+  title = 'Record Manager';
 
   constructor(private authService:AuthenticationService, private routerService:RouterService){}
 

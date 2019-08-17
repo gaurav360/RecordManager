@@ -5,29 +5,8 @@
       </button>
 </div>
 
-<div class="login-page">
+<div class="login-page" style="width:500px">
     <form #loginform=ngForm>
-        <!-- <mat-card class="login">
-            <mat-card-header>
-                <mat-card-title>Login</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <div class='login-container'>
-                    <mat-form-field>
-                        <mat-label>User Id</mat-label>
-                        <input class="username" matInput [(ngModel)]="user.userId" type="text" placeholder="User Id" required name="username"/>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Password</mat-label>
-                        <input class="password" matInput  [(ngModel)]="user.password" type="password" placeholder="Password" minlength="5" required name="password"/>
-                    </mat-form-field>
-                    <div>
-                        <button type="submit" mat-raised-button color="primary" (click)='login()' [disabled]=!loginform.form.valid>Login</button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card> -->
-
         <h3 class="text-center text-info">Login</h3>
         <div class="form-group">
             <label for="username" class="text-info">Username:</label><br>
@@ -41,7 +20,7 @@
             <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
             <input type="submit" (click)='login()' [disabled]=!loginform.form.valid class="btn btn-info btn-md" value="submit">
         </div>
-        <div id="register-link" class="text-right">
+        <div id="register-link" class="text-left">
             <a href="#" class="text-info">Register here</a>
         </div>
     </form>
