@@ -1,0 +1,31 @@
+<div class="alert alert-danger" *ngIf='submitMessage'>
+    {{submitMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <form #registerForm=ngForm>
+
+    <title>Register</title>
+    <div class="form-container">
+      <div>
+        <label>User Id</label>
+        <input  type="text" class="form-control" id="userId" required minlength="4" 
+        [(ngModel)]="user.userId" name="userId" #userId="ngModel" placeholder="User Id">
+      </div>
+      <div [hidden]="userId.valid || userId.pristine" class="alert alert-danger">
+        User Id is required
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password"  class="form-control" id="password" required minlength="5" 
+        [(ngModel)]="user.password" name="password" #password="ngModel" placeholder="Password">
+      </div>
+      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        Password length should be atleast 5 
+      </div>
+      <div>
+          <button type="submit"  (click)='register()' [disabled]=!registerForm.form.valid>Register</button>
+      </div>
+    </div>
+  </form>
